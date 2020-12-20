@@ -3,10 +3,10 @@ import React from 'react';
 import './card-list.styles.css';
 import { Card } from '../card/card.component';
 
-export const CardList = (props) => (
+export const CardList = ({ monsters, searchTerm }) => (
     <div className="card-list">
-        {props.monsters.map(monster => (
-            <Card key={monster.id} monster={monster} />
+        {monsters.map(monster => (
+            <Card key={monster.id} searchTerm={searchTerm} monster={monster} />
         ))}
     </div>
 );
